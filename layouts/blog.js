@@ -3,21 +3,20 @@ import { parseISO, format } from 'date-fns';
 
 import Container from '@/components/Container';
 import Subscribe from '@/components/Subscribe';
-import ViewCounter from '@/components/ViewCounter';
 
 const editUrl = (slug) =>
-  `https://github.com/leerob/leerob.io/edit/main/data/blog/${slug}.mdx`;
+  `https://github.com/cpdis/colindismuke.com/edit/main/data/blog/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://leerob.io/blog/${slug}`
+    `https://colindismuke.com/${slug}`
   )}`;
 
 export default function BlogLayout({ children, frontMatter }) {
   return (
     <Container
-      title={`${frontMatter.title} – Lee Robinson`}
+      title={`${frontMatter.title} – Colin Dismuke`}
       description={frontMatter.summary}
-      image={`https://leerob.io${frontMatter.image}`}
+      image={`https://colindismuke.com${frontMatter.image}`}
       date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
     >
@@ -28,7 +27,7 @@ export default function BlogLayout({ children, frontMatter }) {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full mt-2 mb-8">
           <div className="flex items-center">
             <Image
-              alt="Lee Robinson"
+              alt="Colin Dismuke"
               height={24}
               width={24}
               src="/avatar.jpg"
@@ -36,14 +35,12 @@ export default function BlogLayout({ children, frontMatter }) {
             />
             <p className="text-sm text-gray-700 dark:text-gray-300 ml-2">
               {frontMatter.by}
-              {'Lee Robinson / '}
+              {'Colin Dismuke / '}
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </p>
           </div>
           <p className="text-sm text-gray-500 min-w-32 mt-2 md:mt-0">
             {frontMatter.readingTime.text}
-            {` • `}
-            <ViewCounter slug={frontMatter.slug} />
           </p>
         </div>
         <div className="prose dark:prose-dark max-w-none w-full">

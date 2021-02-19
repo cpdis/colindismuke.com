@@ -1,10 +1,6 @@
 import { useState, useRef } from 'react';
-import Link from 'next/link';
-import useSWR from 'swr';
-import format from 'comma-number';
-import { trackGoal } from 'fathom-client';
+// fender
 
-import fetcher from '@/lib/fetcher';
 import SuccessMessage from '@/components/SuccessMessage';
 import ErrorMessage from '@/components/ErrorMessage';
 import LoadingSpinner from '@/components/LoadingSpinner';
@@ -12,8 +8,7 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 export default function Subscribe() {
   const [form, setForm] = useState(false);
   const inputEl = useRef(null);
-  const { data } = useSWR('/api/subscribers', fetcher);
-  const subscriberCount = format(data?.count);
+  // const { data } = useSWR('/api/subscribers', fetcher);
 
   const subscribe = async (e) => {
     e.preventDefault();
@@ -38,7 +33,6 @@ export default function Subscribe() {
       return;
     }
 
-    trackGoal('JYFUFMSF', 0);
     inputEl.current.value = '';
     setForm({
       state: 'success',
@@ -52,14 +46,13 @@ export default function Subscribe() {
         Subscribe to the newsletter
       </h5>
       <p className="my-1 text-gray-800 dark:text-gray-200">
-        Get emails from me about web development, tech, and early access to new
-        articles.
+        Get emails from me about interesting things I find on the Internet.
       </p>
       <form className="relative my-4" onSubmit={subscribe}>
         <input
           ref={inputEl}
           aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
+          placeholder="hey@hey.com"
           type="email"
           autoComplete="email"
           required
@@ -77,11 +70,8 @@ export default function Subscribe() {
       ) : form.state === 'success' ? (
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
-        <p className="text-sm text-gray-800 dark:text-gray-200">
-          {`${subscriberCount || '-'} subscribers – `}
-          <Link href="/newsletter">
-            <a>28 issues</a>
-          </Link>
+        <p className="text-xs text-gray-500 dark:text-gray-200">
+          No spam, ever.
         </p>
       )}
     </div>

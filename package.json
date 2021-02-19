@@ -1,16 +1,16 @@
 {
-  "name": "leerob.io",
+  "name": "colindismuke.com",
   "description": "My personal website.",
   "version": "0.0.0",
   "author": {
-    "name": "Lee Robinson",
-    "email": "me@leerob.io",
-    "url": "https://leerob.io"
+    "name": "Colin Dismuke",
+    "email": "colin.dismuke@gmail.com",
+    "url": "https://colindismuke.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leerob/leerob.io.git"
+    "url": "git+https://github.com/cpdis/colindismuke.com.git"
   },
   "scripts": {
     "build": "next build",
