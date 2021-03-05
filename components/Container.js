@@ -103,9 +103,9 @@ export default function Container(props) {
               Blog
             </a>
           </NextLink>
-          <NextLink href="/dashboard">
+          <NextLink href="https://colindismuke.photo/">
             <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">
-              Dashboard
+              Photos
             </a>
           </NextLink>
         </div>

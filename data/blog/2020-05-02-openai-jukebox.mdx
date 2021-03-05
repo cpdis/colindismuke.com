@@ -1,0 +1,15 @@
+---
+title: 'Jukebox'
+publishedAt: '2020-05-01'
+summary: 'OpenAI built Jukebox, a neural net that generates music, including rudimentary singing, as raw audio in a variety of genres and artist styles.'
+---
+
+[OpenAI](https://openai.com/) built “[Jukebox, a neural net that generates music](https://openai.com/blog/jukebox/), including rudimentary singing, as raw audio in a variety of genres and artist styles.”
+
+> Automatic music generation dates back to more than half a century. A prominent approach is to generate music symbolically in the form of a piano roll, which specifies the timing, pitch, velocity, and instrument of each note to be played. This has led to impressive results like producing Bach chorals, polyphonic music with multiple instruments, as well as minute long musical pieces.
+
+> But symbolic generators have limitations—they cannot capture human voices or many of the more subtle timbres, dynamics, and expressivity that are essential to music. A different approach one can also use a hybrid approach—first generate the symbolic music, then render it to raw audio using a wavenet conditioned on piano rolls, an autoencoder, or a GAN—or do music style transfer, to transfer styles between classical and jazz music, generate chiptune music, or disentangle musical style and content. For a deeper dive into raw audio modelling, we recommend this excellent [overview](https://benanne.github.io/2020/03/24/audio-generation.html). Generating music at the audio level is challenging since the sequences are very long. A typical 4-minute song at CD quality (44 kHz, 16-bit) has over 10 million timesteps. For comparision, GPT-2 had 1,000 timesteps and [OpenAI Five](https://openai.com/projects/five/) took tens of thousands of timesteps per game. Thus, to learn the high level semantics of music, a model would have to deal with extremely long-range dependencies.
+
+> One way of addressing the long input problem is to use an autoencoder that compresses raw audio to a lower-dimensional space by discarding some of the perceptually irrelevant bits of information. We can then train a model to generate audio in this compressed space, and upsample back to the raw audio space.
+
+> We chose to work on music because we want to continue to push the boundaries of generative models. Our previous work on [MuseNet](https://openai.com/blog/musenet) explored synthesizing music based on large amounts of MIDI data. Now in raw audio, our models must learn to tackle high diversity as well as very long range structure, and the raw audio domain is particularly unforgiving of errors in short, medium, or long term timing.

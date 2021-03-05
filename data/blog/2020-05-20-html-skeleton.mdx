@@ -1,0 +1,100 @@
+---
+title: 'Basic HTML Skeleton'
+publishedAt: '2020-05-20'
+---
+
+Copy-paste this into your favorite text expansion software.
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>✨Title ✨</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Your name">
+      <meta name="description" content="A brief description">
+      <meta property="og:title" content="✨Title ✨">
+      <meta property="og:type" content="website">
+      <meta property="og:description" content="A brief description">
+      <meta property="og:image" content="/cool-image.png">
+      <meta property="og:url" content="/here.html">
+      <meta property="og:site_name" content="✨Title ✨">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="Twitter username">
+      <meta name="twitter:title" content="✨Title ✨">
+      <meta name="twitter:description" content="A brief description">
+      <meta name="twitter:image:alt" content="image description">
+      <link href="style.css" rel="stylesheet">
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+      <title>✨Title ✨</title>
+    </head>
+    <body>
+      <h1>⭐ Your amazing site here ⭐</h1>
+      <script src="script.js"></script>
+    </body>
+    </html>
+
+## Why
+
+A quick and easy way to get started with a new static HTML project. Use it as a foundation for building a simple page with vanilla web technologies. **Bonus**: includes all the best practices for social media sharing too 💫
+
+## Explanation
+
+    <!--
+      A long time ago, the DOCTYPE was needed to specify different HTML versions.
+      However, as of HTML5, providing `html` is sufficient.
+    -->
+    <!DOCTYPE html>
+    <!-- Specifies the appropriate language for your site. In this case, english -->
+    <html lang="en">
+    <head>
+      <title>✨Title ✨</title>
+      <!--
+        UTF-8 is a character set that includes all of the characters you could
+    	ever want in a website.
+      -->
+      <meta charset="utf-8">
+      <!--
+        This critical tag ensures that items on the screen scale
+        correctly on mobile devices. There will be problems if you don't include 	 it.
+      -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--
+        Set your name and a brief description to be displayed in search engines.
+      -->
+      <meta name="author" content="Your name">
+      <meta name="description" content="A brief description">
+      <!--
+        `og` stands for Open Graph, enables any web page to become a rich object 	 in a social graph. These tags are essential for ensuring your site gains    	 an appropriate card when sharing on social media.
+      -->
+      <meta property="og:title" content="✨Title ✨">
+      <meta property="og:type" content="website">
+      <meta property="og:description" content="A brief description">
+      <meta property="og:image" content="/cool-image.png">
+      <meta property="og:url" content="/here.html">
+      <meta property="og:site_name" content="✨Title ✨">
+      <!--
+        `twitter` is similar to Open Graph, but specific to Twitter.
+        There are several different customizations to be found here:
+        https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started
+      -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="Twitter username">
+      <meta name="twitter:title" content="✨Title ✨">
+      <meta name="twitter:description" content="A brief description">
+      <meta name="twitter:image:alt" content="image description">
+      <!-- Include one or more CSS files to change the styling of the website. -->
+      <link href="style.css" rel="stylesheet">
+      <!--
+        A favicon is the small image that appears in the browser tab. Use 			`image/svg+xml` to avoid having to provide multiple sizes of `.ico` 		images.
+      -->
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+      <!-- This title shows up in the page's tab, next to the favicon -->
+      <title>✨Title ✨</title>
+    </head>
+    <body>
+      <h1>⭐ Your amazing site here ⭐</h1>
+      <!-- Include Javascript, if required. -->
+      <script src="script.js"></script>
+    </body>
+    </html>

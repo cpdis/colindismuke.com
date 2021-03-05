@@ -1,0 +1,29 @@
+---
+title: 'Creating A Podcast Transcript Using Overcast, Dropbox, Descript, Zapier, and Shortcuts (Part 1)'
+publishedAt: '2020-05-05'
+excerpt: 'This workflow brings together Overcast, Dropbox, Shortcuts, Zapier, and Descript to save an audio file from Overcast in Dropbox.'
+---
+
+Occasionally I’ll listen to a podcast and decide that it would be nice to have a transcript. Possibly for a [post](/the-eventually-equation/). Or for a tweet. Or just to reference later on.
+
+[Some shows](https://distributed.blog) make transcriptions available with each episode, but for most it doesn’t make sense to waste the time or money.
+
+[Google](https://searchengineland.com/google-brings-search-to-podcasts-through-automatic-transcription-314798) and [Apple](https://9to5mac.com/2019/06/04/podcasts-ios-13/) are both automatically transcribing some or all of the shows in their directories. As far as I can tell though, the transcriptions are being used for search indexes (which is great!) not for the end listener.
+
+I want an easy way to go from podcast to text, ideally using a Shortcut from within [Overcast](https://overcast.fm), my podcast player of choice. So far, I’ve been able to accomplish half of this workflow (which is why this is part 1).
+
+This workflow brings together [Overcast](https://overcast.fm/), [Dropbox](https://www.dropbox.com/?landing=dbv2), Shortcuts, [Zapier](https://zapier.com/home), and [Descript](https://www.descript.com/). The first half (the subject of this post) uses Shortcuts to save the audio file from Overcast in Dropbox. The second half uses Zapier to watch a specific Dropbox folder, send the audio file through Descript’s transcription engine, and then output a text file.
+![](/content/images/2020/05/Image-5-4-20--4-47-PM.png)
+Let’s go through the steps.
+
+The shortcut first uses an `if` statement to check whether it was invoked from the Share Sheet or if it was run from the Shortcuts app or home screen with a podcast URL on the clipboard.
+
+It then looks at the URL being shared to verify that it is a legitimately from Overcast. In the future, this shortcut could be made more generic by using an `if` statement to check for multiple podcast player URLs. However, I only use Overcast so there’s no need for that here.
+
+Shortcuts then takes that URL and uses the `Get contents of...` and `Make HTML from...` actions to get the HTML of the specific episode page on [overcast.fm](https://overcast.fm). Then, using the Text `Match` action, the title of the episode (`og:title`) and original audio source (`twitter:player:stream`) are stored in the `Matches` variable.
+
+The `Get contents of...` Network action is used to download the audio file from its original source. Finally, the file is renamed to `Podcast Description` (which was previously set to `og:title`) and then saved to a specific folder in Dropbox.
+
+At this point, Zapier should be watching the folder in Dropbox and then send it to Descript to be transcribed. The Zap runs reliably and even names the project in Descript correctly. However, the actual audio isn’t imported and, therefore, can’t be transcribed. Once I get that figured out I’ll go into more detail how it’s done. For now, I can just drag the audio file into the Descript app if I need a transcription 💫
+
+You can get the Overcast → Dropbox shortcut [here](https://www.icloud.com/shortcuts/5ac3181a386a4a97a83a65c269248f36).

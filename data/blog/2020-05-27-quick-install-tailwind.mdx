@@ -1,0 +1,161 @@
+---
+title: 'Quick Install Tailwind CSS'
+publishedAt: '2020-05-27'
+summary: 'Getting Tailwind set up with a vanilla HTML, CSS, and JS website.'
+---
+
+This is mostly a personal reference for the future – hopefully it will help a few other people too. My most common use case right now is vanilla HTML, CSS, and JS so that's what this is tailored towards.
+
+# Method 1: Install via CDN
+
+**Fastest but more downside**
+
+The fastest way to get started is to use Tailwind's CDN, avoiding any sort of involved installation process entirely. With a single `<link>` tag, you get the latest default configuration build.
+
+```html
+<link
+  href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+  rel="stylesheet"
+/>
+```
+
+Unfortunately, choosing this method [will lock you out of certain functionality](https://tailwindcss.com/docs/installation/#using-tailwind-via-cdn) including:
+
+- Unable to customize the default theme
+- Unable to install third-party plugins
+- Unable to use directives
+- Unable to enable features (i.e. group-hover)
+
+# Method 2: Tailwind CLI
+
+_Fully featured, a bit more involved_
+
+Here's the whole process for using the Tailwind CLI to get started with your project:
+
+**\***Note:\*_\*\* This is on mac OS with `npm` installed._
+
+1. Create a new folder for your project.
+2. `cd` into your project folder.
+3. Initialize your project with `npm` by running:
+
+```bash
+npm init
+```
+
+This will take you through creating a`package.json` filethat lives at the top level of your project folder.
+
+4. Then, install Tailwind using `npm`:
+
+```bash
+npm install tailwindcss --save-dev
+```
+
+5. Tailwind is now installed, before we get it running, let's set up the basic folder structure first.
+
+In the root of the project folder, create an `index.html` file (`touch index.html` from the command line) and a `styles.css` folder (`mkdir styles`). `cd` into the `styles` folder and create a`styles.css` file.
+
+Next, add some basic structure to `index.html`:
+
+```html
+.<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>✨Title ✨</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Your name" />
+    <meta name="description" content="A brief description" />
+    <meta property="og:title" content="✨Title ✨" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A brief description" />
+    <meta property="og:image" content="/cool-image.png" />
+    <meta property="og:url" content="/here.html" />
+    <meta property="og:site_name" content="✨Title ✨" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Twitter username" />
+    <meta name="twitter:title" content="✨Title ✨" />
+    <meta name="twitter:description" content="A brief description" />
+    <meta name="twitter:image:alt" content="image description" />
+    <link rel="canonical" href="/here.html" />
+    <link href="styles/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>✨Title ✨</title>
+  </head>
+  <body>
+    <h1>⭐ Your amazing site here ⭐</h1>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+After that, add the following Tailwind directives to the top of `styles.css`:
+
+```css
+<!-- Tailwind imports -->
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+6. Now that we have a basic setup, we can use the Tailwind CLI to process `styles.css` and start using Tailwind to design.
+
+`cd` into the `styles` folder and run the following command:
+
+```bash
+npx tailwind build styles.css -o output.css
+```
+
+`styles.css` is the current CSS file and `output.css` is whatever you want the processed CSS to be named. If run successfully,there should now be a file named `output.css` which means you have successfully installed Tailwind.
+
+7.  To test it out, copy and paste one of the numerous examples from the documentation into `index.html`.
+
+```html
+<div class="w-full max-w-xs">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Username
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="username"
+        type="text"
+        placeholder="Username"
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Password
+      </label>
+      <input
+        class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+        id="password"
+        type="password"
+        placeholder="******************"
+      />
+      <p class="text-red-500 text-xs italic">Please choose a password.</p>
+    </div>
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+      >
+        Sign In
+      </button>
+      <a
+        class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+        href="#"
+      >
+        Forgot Password?
+      </a>
+    </div>
+  </form>
+  <p class="text-center text-gray-500 text-xs">
+    &copy;2020 Acme Corp. All rights reserved.
+  </p>
+</div>
+```
+
+If you’ve done everything right so far, running your `index.html` in your browser should produce an image like below.
+![](/content/images/2020/05/image.png)[A login form using Tailwind](https://tailwindcss.com/components/forms/#login-form).
+That’s it!
