@@ -17,7 +17,7 @@ export default function Blog({ posts }) {
 
   return (
     <Container
-      title="Blog – Lee Robinson"
+      title="Blog – Colin Dismuke"
       description="Thoughts on the software industry, programming, tech, videography, music, and my personal life."
     >
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
@@ -25,7 +25,7 @@ export default function Blog({ posts }) {
           Blog
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          {`I've been writing online since 2014, mostly about web development and tech careers.
+          {`I write occasionally about web development, tech, or whatever sparks my interest.
             In total, I've written ${posts.length} articles on this site.
             Use the search below to filter by title.`}
         </p>
@@ -58,30 +58,30 @@ export default function Blog({ posts }) {
               Most Popular
             </h3>
             <BlogPost
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-              summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
-              slug="style-guides-component-libraries-design-systems"
+              title="What is Freehold?"
+              summary="A lightly edited and condensed transcript of Patrick Stanley’s overview of Freehold."
+              slug="freehold-transcript"
             />
             <BlogPost
-              title="How Stripe Designs Beautiful Websites"
-              summary="Examining the tips and tricks used to make Stripe's website design a notch above the rest."
-              slug="how-stripe-designs-beautiful-websites"
+              title="All the Great Podcasts"
+              summary="I’ve always wanted a place to point people to when they ask for podcast recommendations and that place is now here."
+              slug="all-the-great-podcasts"
             />
             <BlogPost
-              title="Creating a Monorepo with Lerna & Yarn Workspaces"
-              summary="In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process."
-              slug="monorepo-lerna-yarn-workspaces"
+              title="The Eventually Equation"
+              summary="An illustration from Naval's most popular tweetstorm."
+              slug="the-eventually-equation"
             />
           </>
         )}
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           All Posts
         </h3>
-        {!filteredBlogPosts.length && 
+        {!filteredBlogPosts.length && (
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             No posts found.
           </p>
-        }
+        )}
         {filteredBlogPosts.map((frontMatter) => (
           <BlogPost key={frontMatter.title} {...frontMatter} />
         ))}

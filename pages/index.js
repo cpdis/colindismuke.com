@@ -42,19 +42,19 @@ export default function Home() {
           Most Popular
         </h3>
         <BlogPost
-          title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-          summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
-          slug="style-guides-component-libraries-design-systems"
+          title="What is Freehold?"
+          summary="A lightly edited and condensed transcript of Patrick Stanley’s overview of Freehold."
+          slug="freehold-transcript"
         />
         <BlogPost
-          title="How Stripe Designs Beautiful Websites"
-          summary="Examining the tips and tricks used to make Stripe's website design a notch above the rest."
-          slug="how-stripe-designs-beautiful-websites"
+          title="All the Great Podcasts"
+          summary="I’ve always wanted a place to point people to when they ask for podcast recommendations and that place is now here."
+          slug="all-the-great-podcasts"
         />
         <BlogPost
-          title="Creating a Monorepo with Lerna & Yarn Workspaces"
-          summary="In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process."
-          slug="monorepo-lerna-yarn-workspaces"
+          title="The Eventually Equation"
+          summary="An illustration from Naval's most popular tweetstorm."
+          slug="the-eventually-equation"
         />
         {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Projects

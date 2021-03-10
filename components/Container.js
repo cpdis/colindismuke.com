@@ -51,11 +51,12 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
+      <nav className="sticky-nav flex justify-end items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <button
+        {/* Removed dark/light mode button in favor of mirroring system. */}
+        {/* <button
           aria-label="Toggle Dark Mode"
           type="button"
           className="bg-gray-100 dark:bg-gray-800 rounded p-3 h-10 w-10"
@@ -86,7 +87,7 @@ export default function Container(props) {
               )}
             </svg>
           )}
-        </button>
+        </button> */}
         <div>
           <NextLink href="/">
             <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">

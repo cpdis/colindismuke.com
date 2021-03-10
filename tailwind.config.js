@@ -2,11 +2,15 @@ const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: 'class',
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)'
+      },
+      screens: {
+        light: { raw: '(prefers-color-scheme: light)' },
+        dark: { raw: '(prefers-color-scheme: dark)' }
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
@@ -76,5 +80,21 @@ module.exports = {
   variants: {
     typography: ['dark']
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [
+    function ({ addBase, config }) {
+      addBase({
+        body: {
+          color: config('theme.colors.black'),
+          backgroundColor: config('theme.colors.white')
+        },
+        '@screen dark': {
+          body: {
+            color: config('theme.colors.white'),
+            backgroundColor: config('theme.colors.black')
+          }
+        }
+      });
+    },
+    require('@tailwindcss/typography')
+  ]
 };
