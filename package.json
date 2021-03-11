@@ -20,6 +20,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "0.5.0",
     "@mdx-js/loader": "1.6.22",
+    "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "1.6.22",
     "@next/mdx": "10.0.5",
     "@tailwindcss/typography": "^0.3.1",
@@ -28,10 +29,11 @@
     "comma-number": "2.0.1",
     "date-fns": "2.16.1",
     "fathom-client": "3.0.0",
-    "googleapis": "48.0.0",
+    "googleapis": "^67.1.1",
     "gray-matter": "4.0.2",
     "ioredis": "^4.19.4",
-    "mdx-prism": "0.3.1",
+    "mdx-embed": "^0.0.19",
+    "mdx-prism": "^0.3.3",
     "micro-cookie-session": "^2.0.0-beta.1",
     "next": "10.0.5",
     "next-mdx-remote": "^2.1.1",
@@ -46,7 +48,7 @@
     "remark-code-titles": "0.1.1",
     "remark-slug": "6.0.0",
     "swr": "0.4.0",
-    "tailwindcss": "^2.0.2"    
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "globby": "11.0.2",
