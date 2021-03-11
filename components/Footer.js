@@ -68,27 +68,27 @@ export default function Footer() {
         .
       </div>
 
-      <div className="flex mx-60 mb-4 justify-between bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-orange-400 to-pink-400 transform hover:bg-gradient-to-l hover:from-pink-400 hover:via-orange-400 hover:to-green-400">
+      <div className="flex mb-4 justify-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-orange-400 to-pink-400 transform hover:bg-gradient-to-l hover:from-pink-400 hover:via-orange-400 hover:to-green-400">
         <div>
           <a href="https://weirdwidewebring.net/prev.html?ref=colindismuke.com">
             Previous
           </a>
         </div>
-        <div>‡</div>
+        <div className="mx-2">‡</div>
         <div>
           <a href="https://weirdwidewebring.net/next.html?ref=colindismuke.com">
             Next
           </a>
         </div>
-        <div>‡</div>
+        <div className="mx-2">‡</div>
         <div>
           <a href="https://weirdwidewebring.net/random.html">Random</a>
         </div>
-        <div>‡</div>
+        <div className="mx-2">‡</div>
         <div>
           <a href="https://weirdwidewebring.net">All</a>
         </div>
-        <div>‡</div>
+        <div className="mx-2">‡</div>
         <div>
           <a href="https://weirdwidewebring.net/join.html">Join</a>
         </div>
