@@ -18,7 +18,7 @@ export default function Container(props) {
   const meta = {
     title: 'Colin Dismuke – Ocean engineer, developer, photographer.',
     description: `World traveling ocean engineer, frontend developer, and photographer.`,
-    image: 'https://leerob.io/static/images/banner.png',
+    image: 'https://colindismuke.com/static/images/banner.png',
     type: 'website',
     ...customMeta
   };

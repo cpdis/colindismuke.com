@@ -14,8 +14,20 @@ export default function Home() {
           Hi, I'm Colin.
         </h1>
         <h2 className="prose text-gray-600 dark:text-gray-400 mb-16">
-          I'm an ocean engineer, web developer, and sometimes photographer. If
-          you'd like to get in touch, you can find me on&nbsp;
+          I'm an ocean engineer, web developer, and sometimes photographer.
+          Currently, I'm an ocean engineer at{' '}
+          <Link href="https://twitter.com/cpdis">
+            <a>Delmar Systems</a>
+          </Link>{' '}
+          and a{' '}
+          <Link href="https://www.beondeck.com/climate">
+            <a>Climate Tech Fellow</a>
+          </Link>{' '}
+          at{' '}
+          <Link href="https://www.beondeck.com/">
+            <a>On Deck</a>
+          </Link>
+          . If you'd like to get in touch, you can find me on&nbsp;
           <Link href="https://twitter.com/cpdis">
             <a>Twitter</a>
           </Link>

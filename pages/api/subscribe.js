@@ -12,7 +12,7 @@ export default async (req, res) => {
       {
         body: JSON.stringify({
           email,
-          tags: ['leerob.io']
+          tags: ['colindismuke.com']
         }),
         headers: {
           Authorization: `Token ${API_KEY}`,
