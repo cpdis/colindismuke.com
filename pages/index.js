@@ -89,7 +89,7 @@ export default function Home() {
           href="https://password.coffee/"
           icon="fastfeedback"
         /> */}
-        <Timeline />
+        {/* <Timeline /> */}
         <Subscribe />
       </div>
     </Container>
