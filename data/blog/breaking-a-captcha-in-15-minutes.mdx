@@ -4,6 +4,14 @@ publishedAt: '2018-02-15'
 summary: 'How to break a CAPTCHA using Python, OpenCV, Keras, and Tensorflow.'
 ---
 
+<Image
+  alt={`Breaking a CAPTCHA`}
+  src={`/static/images/captcha/header.jpg`}
+  width={1000}
+  height={667}
+  priority
+/>
+
 So, this took me a lot longer to get to than I was planning on 🤦🏼‍♂️ Despite my best intentions and greatest ambitions, life continues to happen and usually take priority over projects I'm doing on the side. The irony is that this project is relatively simple, both [Adam Geitgey's](https://twitter.com/ageitgey) original project/code and my implementation of it.
 
 For this project, and others like it, I've decided the best way to learn (and present what I've learned) is to go through the code, mostly line by line and explain what is going on. There are definitely opportunities to modify/improve the original code, use different training data, and test out different neural network implementations, but in the interest of time I'm just going to leave everything as is.
@@ -166,7 +174,15 @@ model.add(Dense(32, activation="softmax"))
 ```
 
 Graphically, the neural network looks like this:
-![CAPTCHA model in Keras](/content/images/2020/03/CAPTCHA_model.png)
+
+<Image
+  alt={`Neural network model`}
+  src={`/static/images/captcha/1.png`}
+  width={525}
+  height={886}
+  priority
+/>
+
 The model is compiled in a single line using Keras. There are many types of [losses](https://keras.io/losses/) and [optimizers](https://keras.io/optimizers/) but cross entropy and the Adam optimizer are two of the most commonly used.
 
 ```python
@@ -232,7 +248,14 @@ letter = lb.inverse_transform(prediction)[0]
 predictions.append(letter)
 ```
 
-![CLI output of CAPTCHA solution](/content/images/2020/03/CLI_output.jpg)
+<Image
+  alt={`CAPTCHA text`}
+  src={`/static/images/captcha/2.jpg`}
+  width={988}
+  height={854}
+  priority
+/>
+
 In addition to the prediction being output to the command line, the CAPTCHA image with the predicted letters/numbers is shown using `cv2.imshow()`. `cv2.waitKey()` either waits for a keystroke to advance to the next image or a specified amount of time (500-ms in this case).
 
 ```python
@@ -240,5 +263,12 @@ cv2.imshow("Output", output)
 cv2.waitKey(500) # Wait for a specified amount of time (in ms) before moving to the next image
 ```
 
-![Graphical output of CAPTCHA solution](/content/images/2020/03/CAPTCHA_output.jpg)
+<Image
+  alt={`Recognized CAPTCHA text`}
+  src={`/static/images/captcha/3.jpg`}
+  width={560}
+  height={128}
+  priority
+/>
+
 The slightly modified code, resources, and notes for this project are located [here](https://github.com/cpdis/Experiments/tree/master/2_Breaking_CAPTCHA). The original code and data can be downloaded [here](https://s3-us-west-2.amazonaws.com/mlif-example-code/solving_captchas_code_examples.zip).

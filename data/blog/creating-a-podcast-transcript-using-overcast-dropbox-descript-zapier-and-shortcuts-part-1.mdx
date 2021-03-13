@@ -13,7 +13,15 @@ Occasionally I’ll listen to a podcast and decide that it would be nice to have
 I want an easy way to go from podcast to text, ideally using a Shortcut from within [Overcast](https://overcast.fm), my podcast player of choice. So far, I’ve been able to accomplish half of this workflow (which is why this is part 1).
 
 This workflow brings together [Overcast](https://overcast.fm/), [Dropbox](https://www.dropbox.com/?landing=dbv2), Shortcuts, [Zapier](https://zapier.com/home), and [Descript](https://www.descript.com/). The first half (the subject of this post) uses Shortcuts to save the audio file from Overcast in Dropbox. The second half uses Zapier to watch a specific Dropbox folder, send the audio file through Descript’s transcription engine, and then output a text file.
-![](/content/images/2020/05/Image-5-4-20--4-47-PM.png)
+
+<Image
+  alt={`Podcast transcript shortcut`}
+  src={`/static/images/podcast-transcript/shortcut.png`}
+  width={1488}
+  height={717}
+  priority
+/>
+
 Let’s go through the steps.
 
 The shortcut first uses an `if` statement to check whether it was invoked from the Share Sheet or if it was run from the Shortcuts app or home screen with a podcast URL on the clipboard.
