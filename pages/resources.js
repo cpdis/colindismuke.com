@@ -59,7 +59,11 @@ export default function Resources() {
             Crypto x Creator Economy
           </a>
         </NextLink>
-
+        <NextLink href="https://kyla.substack.com/p/owning-the-online-what-are-nfts">
+          <a className="mb-2 hover:underline text-black dark:text-white">
+            Owning the Online: What are NFTs?
+          </a>
+        </NextLink>
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Newsletters
         </h3>
