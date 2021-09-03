@@ -114,6 +114,11 @@ export default function Container(props) {
               Photos
             </a>
           </NextLink>
+          <NextLink href="/resources">
+            <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">
+              Resources
+            </a>
+          </NextLink>
         </div>
       </nav>
       <main
