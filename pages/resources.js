@@ -44,6 +44,22 @@ export default function Resources() {
             Crypto x Creator Economy
           </a>
         </NextLink>
+        <NextLink href="https://tylerxhobbs.com/essays/2021/the-rise-of-long-form-generative-art">
+          <a className="mb-2 hover:underline text-black dark:text-white">
+            The Rise of Long-form Generative Art
+          </a>
+        </NextLink>
+        <NextLink href="https://galaxyrtk.substack.com/p/diaries-of-an-accidental-art-addict">
+          <a className="mb-2 hover:underline text-black dark:text-white">
+            Diaries of an Accidental Art Addict
+          </a>
+        </NextLink>
+        <NextLink href="https://p.mirror.xyz/cVN3KOss0uqpZwxHQKtC4Syvn1RfXaxofFKHJuKLWS4">
+          <a className="mb-2 hover:underline text-black dark:text-white">
+            Crypto x Creator Economy
+          </a>
+        </NextLink>
+
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Newsletters
         </h3>
@@ -60,6 +76,11 @@ export default function Resources() {
         <NextLink href="https://collisions.substack.com/">
           <a className="mb-2 hover:underline text-black dark:text-white">
             Collisions
+          </a>
+        </NextLink>
+        <NextLink href="https://galaxyrtk.substack.com/">
+          <a className="mb-2 hover:underline text-black dark:text-white">
+            Meandering Musings
           </a>
         </NextLink>
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
