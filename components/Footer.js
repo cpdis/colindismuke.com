@@ -26,11 +26,11 @@ export default function Footer() {
                 Home
               </a>
             </Link>
-            <Link href="/about">
+            {/* <Link href="/about">
               <a className="text-gray-500 hover:text-gray-600 transition">
                 About
               </a>
-            </Link>
+            </Link> */}
             <Link href="/newsletter">
               <a className="text-gray-500 hover:text-gray-600 transition">
                 Newsletter
