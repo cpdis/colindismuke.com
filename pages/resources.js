@@ -11,6 +11,14 @@ export default function Resources() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Resources
         </h1>
+        <iframe
+          src="https://pitch.com/embed/8e3e9aff-ded3-4afa-9dd3-ce2e8c588bb9"
+          allow="fullscreen"
+          allowfullscreen=""
+          width="560"
+          height="315"
+          // className="w-screen justify-center"
+        ></iframe>
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Articles
         </h3>
