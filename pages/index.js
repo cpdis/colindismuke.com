@@ -32,6 +32,10 @@ export default function Home() {
             <a>Twitter</a>
           </Link>
           ,&nbsp;
+          <Link href="https://mas.to/@cpdis">
+            <a rel="me">Mastodon</a>
+          </Link>
+          ,&nbsp;
           <Link href="https://github.com/cpdis">
             <a>Github</a>
           </Link>
