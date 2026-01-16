@@ -2,6 +2,9 @@
   "name": "colindismuke.com",
   "description": "My personal website.",
   "version": "0.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "author": {
     "name": "Colin Dismuke",
     "email": "colin.dismuke@gmail.com",
